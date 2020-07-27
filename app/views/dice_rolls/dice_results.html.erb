@@ -1,0 +1,19 @@
+<h1>
+  Dice Rolls
+</h1>
+
+<dl>
+  <dt>
+   Dice Rolls
+  </dt>
+ 
+<% @dice_array.each do |roll| %>
+  <dd>
+    <%= roll %>
+  </dd>
+<%end%>
+
+
+<a href="/random/new">
+  Roll Again
+</a>
