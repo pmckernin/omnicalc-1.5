@@ -1,5 +1,5 @@
 class DiceController < ApplicationController
-    def dice_static
+    def six_four
         @dice_array = []
 
         6.times do 
@@ -22,5 +22,9 @@ class DiceController < ApplicationController
         end
 
         render({ :template => "dice_rolls/dice_results.html.erb" })
+    end
+
+    def dice_picker
+        render({ :template => "dice_rolls/pick_form.html.erb" })
     end
 end

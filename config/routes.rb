@@ -14,6 +14,9 @@ Rails.application.routes.draw do
   get("/random/new", { :controller => "calculations", :action => "random" })
   get("/random/results", { :controller => "calculations", :action => "random_results" })
   
-  get("/6/4", { :controller => "dice", :action => "dice_static"})
+  get("pick_dice", {:controller => "dice", :action => "dice_picker"})
+  get("/6/4", { :controller => "dice", :action => "six_four"})
+  
+  get("/dice_results", { :controller => "dice", :action => "dice_flex"})
   get("/:count/:dice", { :controller => "dice", :action => "dice_flex"})
 end
